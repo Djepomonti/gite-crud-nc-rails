@@ -1,1 +1,94 @@
 // Specific CSS for your home-page
+.btn-primary{
+  a{  text-decoration: none !important;
+    color: #fff !important;}
+    background-color: #252830 !important;
+    font-size: 14px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: solid 2px #252830 !important;;
+
+}
+
+.btn-light{
+  a{
+    text-decoration: none !important;
+    color: #252830 !important;
+  }
+    font-size: 14px;
+    padding: 14px 32px;
+    border: solid 2px #252830 !important;;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.hero{
+  background-image: url(home1.png);
+  width: 100%;
+  height: 92vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.homeintro{
+  font-family: "Montserrat", "Helvetica Neue", "sans-serif";
+  color: #252830;
+  font-size: 64px;
+  padding-top: 50px;
+  padding-left: 160px;
+  font-weight: 700;
+  line-height: 96px;
+}
+.baseline {
+  color: #252830;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.flexbtn{
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+}
+@media (max-width: 1250px) {
+  .homeintro{
+    font-size: 48px;
+    line-height: 72px;
+    padding-left: 80px;
+    padding-top: 60px;
+
+  }
+ }
+@media (max-width: 1000px) {
+  .homeintro{
+    font-size: 36px;
+    line-height: 54px;
+    padding-left: 40px;
+    padding-top: 60px;
+    .baseline{
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+  }
+ }
+@media (max-width: 800px) {
+  .homeintro{
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 20px;
+    padding-top: 65px;
+    .baseline{
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+  }
+ }

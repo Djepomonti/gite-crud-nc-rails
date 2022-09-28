@@ -1,0 +1,113 @@
+.bookingline {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  margin-top: 20px;
+  line-height: 33px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.boldline {
+  color: #252830;
+  padding: 4px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  text-align: center;
+}
+
+.btnmodifier {
+  display: flex;
+  background-color: #7c86a0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.btnsuppr {
+  display: flex;
+  background-color: #a35858;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.titreresa::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.titreresa:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.titreresa::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: #7c86a0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.titreresa {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+.centerdiv{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  a{
+    text-decoration: none;
+    color: #fff;
+    &:hover{
+      text-decoration: none;
+      color: rgb(233, 254, 229);
+    }
+  }
+}

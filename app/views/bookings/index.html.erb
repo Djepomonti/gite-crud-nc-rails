@@ -1,0 +1,48 @@
+<div class="titreresa">Retrouvez ici toutes vos reservations</div>
+
+<% current_user.bookings.each do |booking| %>
+<div class="bookingline">
+  <div class="boldline">Chambre  <br> <%= booking.room.name %></div>
+  <div class="boldline">Prénom   <br><%= booking.first_name %></div>
+  <div class="boldline">Nom   <br><%= booking.last_name %></div>
+  <div class="boldline">Tel   <br><%= booking.phone_number %></div>
+  <div class="boldline">Adulte   <br><%= booking.adult %></div>
+  <% case booking.child  %>
+  <% when false %>
+    <div class="boldline">Enfant   <br>1</div>
+  <% when true %>
+    <div class="boldline">Bébé   <br>1</div>
+  <% else %>
+      <div class="boldline">Enfant   <br>0</div>
+  <% end %>
+  <div class="boldline">Date d'arrivée  <br><%= booking.starts_at %></div>
+  <div class="boldline">Date de départ   <br><%= booking.ends_at %></div>
+  <div class="boldline">Nombre de nuit   <br><%= (booking.starts_at...booking.ends_at).count %></div>
+<% bookday = (booking.starts_at...booking.ends_at).to_a %>
+<% count = 0 %>
+<% bookday.each do |day| %>
+<% jour = day.wday %>
+<% case Date::DAYNAMES[jour]  %>
+  <% when "Saturday" %>
+  <% prix_enfant = (booking.child == false ? 2000 : 0); %>
+  <% count += 7000  + prix_enfant %>
+  <% when "Sunday" %>
+  <% prix_enfant = (booking.child == false ? 2000 : 0); %>
+  <% count += 7000 + prix_enfant %>
+  <% else %>
+    <% prix_enfant = (booking.child == false ? 1500 : 0); %>
+  <% count += 5000 + prix_enfant%>
+  <% end %>
+  <% end %>
+  <div class="boldline">Prix total  <br><%= count %></div>
+      <div class="btnmodifier"><%= link_to "Modifier", edit_booking_path(booking)%></div>
+    <div class="btnsuppr"><%= link_to "Supprimer",
+    booking_path(booking),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %></div>
+  </div>
+<% end %>
+
+
+<div class="centerdiv"><button type="button" class="btn btn-success"><%= link_to "Retour à l'accueil", rooms_path %></button>
+</div>

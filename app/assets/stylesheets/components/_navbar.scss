@@ -1,12 +1,55 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #252830;
 }
 
+.navbar-brand{
+  h4{
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+  }
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+
+}
+.welcome{
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.btn-nav{
+  margin-right: 400px;
+  background-color: $success;
+  height: 40px;
+  a{
+    color: #252830 !important;
+
+  }
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.nav-link-acc{
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+margin-right: 30px;
+
+  a{
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+  }
 }

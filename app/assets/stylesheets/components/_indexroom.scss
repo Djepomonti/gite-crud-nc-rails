@@ -1,0 +1,71 @@
+.flexcontainer{
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 20px;
+
+}
+.displayinfo{
+  flex-grow: 1;
+
+
+}
+.carteinfo{
+
+  margin: 0 auto;
+  background-image: url(https://scontent.flyn1-1.fna.fbcdn.net/v/t1.6435-9/118635407_3918075841541076_5586929680803125260_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Nkj-bcEQ9tEAX_gP-5-&_nc_ht=scontent.flyn1-1.fna&oh=00_AT9JgdqW8HHxcOIn-GvZ0PdClKyAni0P48JRG9Y9DAv-QQ&oe=63558A72);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  height: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: black;
+  padding-top: 40px;
+  .blocblanc{
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 0;
+
+  }
+  .line{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    color: black;;
+    h4{
+      font-size: 24px;
+    }
+  }
+  h1{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+.blocblanc2{
+  background-color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 0;
+
+}

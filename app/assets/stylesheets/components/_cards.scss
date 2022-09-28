@@ -1,0 +1,125 @@
+@import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/library.less");
+@import url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/variables.less");
+$body: #252830;
+body {
+  background-color: $body;
+  color: white;
+  font-family: "Lato";
+}
+
+.media {
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 767px;
+}
+
+figure {
+  height: 370px;
+  width: 767px;
+  overflow: hidden;
+  position: relative;
+  a {
+    height: 370px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 767px;
+    z-index: 3;
+  }
+
+  &:hover .media {
+    transform: scale(1.25);
+  }
+}
+
+figcaption {
+  color: $body;
+  height: calc(100% - 30px);
+  margin: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+.body {
+  background-color: white;
+  bottom: 0;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+}
+
+svg {
+  height: inherit;
+  width: 100%;
+  text {
+    text-anchor: middle;
+  }
+  #alpha {
+    fill: white;
+  }
+  .title {
+    font-size: 25px;
+    font-family: "Montserrat";
+    letter-spacing: 5px;
+  }
+  #base {
+    fill: white;
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+  }
+}
+.btn-prix {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  right: 4px;
+  bottom: 4px;
+  background-color: #E4DE4F;
+  color: #252830;
+  justify-content: center;
+  align-items: baseline;
+  line-height: 3px;
+  padding: 3px 3px 0 3px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-weight: 700;
+  font-family: "Montserrat", 'sans-serif';
+  h6{
+    font-weight: 700;
+    font-family: "Montserrat", 'sans-serif';
+
+
+  }
+}
+.btn-prix2 {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  right: 4px;
+  bottom: 50px;
+  background-color: #E4DE4F;
+  color: #252830;
+  justify-content: center;
+  align-items: baseline;
+  line-height: 3px;
+  padding: 3px 3px 0 3px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-weight: 700;
+  font-family: "Montserrat", 'sans-serif';
+  h6{
+    font-weight: 700;
+    font-family: "Montserrat", 'sans-serif';
+
+
+  }
+}

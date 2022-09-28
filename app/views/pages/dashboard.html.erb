@@ -1,0 +1,40 @@
+
+<% current_user.bookings.each do |booking| %>
+  <div>Chambre : <%= booking.room.name %></div>
+  <div>Prénom : <%= booking.first_name %></div>
+  <div>Nom : <%= booking.last_name %></div>
+  <div>N tel : <%= booking.phone_number %></div>
+  <div>Adulte : <%= booking.adult %></div>
+  <% case booking.child  %>
+  <% when false %>
+    <div>Enfant : 1</div>
+  <% when true %>
+    <div>bébé : 1</div>
+  <% else %>
+      <div>enfant : 0</div>
+  <% end %>
+  <div>Date d'arrivée : <%= booking.starts_at %></div>
+  <div>Date de départ : <%= booking.ends_at %></div>
+  <div>Nombre de nuit : <%= (booking.starts_at...booking.ends_at).count %></div>
+<% bookday = (booking.starts_at...booking.ends_at).to_a %>
+<% count = 0 %>
+<% bookday.each do |day| %>
+<% jour = day.wday %>
+<% case Date::DAYNAMES[jour]  %>
+  <% when "Saturday" %>
+  <% prix_enfant = (booking.child == false ? 2000 : 0); %>
+  <% count += 7000  + prix_enfant %>
+  <% when "Sunday" %>
+  <% prix_enfant = (booking.child == false ? 2000 : 0); %>
+  <% count += 7000 + prix_enfant %>
+  <% else %>
+    <% prix_enfant = (booking.child == false ? 1500 : 0); %>
+  <% count += 5000 + prix_enfant%>
+  <% end %>
+  <% end %>
+  <div>prix total: <%= count %></div>
+  <%= link_to booking_path(booking.room), method: :delete, data: { confirm: "Are you sure?" } do %>
+     <i class="fa fa-trash" aria-hidden="true"></i>
+              <% end %>
+
+<% end %>

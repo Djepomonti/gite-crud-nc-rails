@@ -1,0 +1,33 @@
+<div class="flexcontainer">
+    <div class="cardsdisplay">
+    <div class="imgshow"><%= image_tag(@room.photo) %></div>
+    <div class="showinfo">
+    <h1><%= @room.name %></h1>
+    <p><%= @room.description %></p>
+    </div>
+    </div>
+    <div class="displayinfo">
+        <div class="carteinfo">
+            <div class="blocblanc2">
+            <div class="form-container">
+    <h2>Réservez cette chambre</h2>
+    <div class="container">
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for [@room, @booking] do |f| %>
+        <%= f.input :first_name, placeholder: "Ajoutez votre prenom" %>
+        <%= f.input :last_name, placeholder: "Ajoutez votre nom" %>
+        <%= f.input :phone_number, placeholder: "Ajoutez votre N de telephone" %>
+        <%= f.input :adult, input_html: { min: '1', max: '2'} %>
+        <%= f.input :child, label: 'nombre d enfants?', collection: [ [false , 'enfant de + de 2 ans' ], [true, "enfant de - de 2 ans"] ], as: :radio_buttons, label_method: :last, value_method: :first, item_wrapper_class: 'inline'%>
+        <div><em>(Pour les enfants de + de 2 ans <br> <strong>1500xpf</strong> en semaine et <strong>2000xpf</strong>  en Week-end)</em>  <br></div>
+          <%= f.input :starts_at, as: :string, required: false, :label => "Choisissez vos dates de réservation", input_html: {class: "datepicker d-none", id: "range_start"} %>
+          <%= f.input :ends_at, as: :string, required: false, label: false, input_html: {class: "datepicker d-none", id: "range_end"} %>
+          <%= f.button :submit, "Réservez", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
